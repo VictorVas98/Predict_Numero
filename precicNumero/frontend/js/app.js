@@ -20,7 +20,7 @@ async function cargarModelo() {
     resultDiv.innerText = "Cargando IA...";
     try {
         // CORRECCIÓN: Ajustada la ruta saliendo desde view/index.html hacia la nueva ubicación
-        model = await tf.loadLayersModel('../modelo_web/model.json');
+        model = await tf.loadLayersModel('./modelo_web/model.json');
         
         resultDiv.innerText = "-";
         console.log("¡Modelo de TensorFlow.js cargado exitosamente!");
