@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREDICNUMERO - TensorFlow.js</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.20.0/dist/tf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Victor Abel Vásquez Morales</h1>
+        <p>Dibuja un número centrado y grande en el recuadro</p>
+        
+        <div class="canvas-container">
+            <canvas id="canvas" width="280" height="280"></canvas>
+        </div>
+
+        <div class="buttons">
+            <button id="clear-btn">Limpiar Lienzo</button>
+            <button id="predict-btn">Predecir Número</button>
+        </div>
+
+        <div class="result-box">
+            <h2>Dígito Detectado:</h2>
+            <div id="result">-</div>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
