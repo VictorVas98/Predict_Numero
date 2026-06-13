@@ -19,7 +19,9 @@ ctx.strokeStyle = "black";
 async function cargarModelo() {
     resultDiv.innerText = "Cargando IA...";
     try {
-        model = await tf.loadLayersModel('../../modelo_web/model.json');
+        // CORRECCIÓN: Ajustada la ruta saliendo desde view/index.html hacia la nueva ubicación
+        model = await tf.loadLayersModel('../modelo_web/model.json');
+        
         resultDiv.innerText = "-";
         console.log("¡Modelo de TensorFlow.js cargado exitosamente!");
     } catch (error) {
@@ -27,6 +29,7 @@ async function cargarModelo() {
         resultDiv.innerText = "Error IA";
     }
 }
+
 cargarModelo();
 
 // 3. Lógica para dibujar con el Mouse
